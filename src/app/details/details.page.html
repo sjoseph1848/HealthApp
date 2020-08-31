@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{peripherals.name || 'Device'}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header> {{peripherals.name || 'Unnamed'}} </ion-card-header>
+    <ion-card-content> {{peripherals.id}} </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header> Services </ion-card-header>
+
+    <ion-list>
+      <ion-item ngfor="let peripheral of peripherals">
+        {{ peripheral}}
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header> Details </ion-card-header>
+    <ion-card-content>
+      <pre>{{peripherals | json }}</pre>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-item>
+      <ion-label>Hey</ion-label>
+    </ion-item>
+  </ion-toolbar>
+</ion-footer>
