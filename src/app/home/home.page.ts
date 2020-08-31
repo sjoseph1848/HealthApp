@@ -24,7 +24,7 @@ export class HomePage {
   Scan() {
     this.devices = [];
     this.ble
-      .scan([], 15)
+      .scan([], 35)
       .subscribe((device) => this.onDeviceDiscovered(device));
   }
   onDeviceDiscovered(device) {

@@ -17,7 +17,7 @@ export class DetailsPage implements OnInit {
 
   BLE_WRITE_CHAR = 'FFF2';
   // command_on_para_on = '00002902-0000-1000-8000-00805f9b34fb';
-  command_on_para_on = new Uint8Array([-86, 85, 15, 3, 124, 1, -32]);
+  command_on_para_on = new Uint8Array([-86, 85, 15, 3, -124, 1, -32]);
   // BLE_SERVICE = 'FFF0';
   // BLE_CHARACTERISTIC = 'FFF2';
   // BLE_Read = '180A';
