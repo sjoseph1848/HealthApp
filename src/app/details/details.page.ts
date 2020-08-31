@@ -16,7 +16,7 @@ export class DetailsPage implements OnInit {
   BLE_READ_SERVICE = '180A';
 
   BLE_WRITE_CHAR = 'FFF2';
-  // command_on_para_on = '00002902-0000-1000-8000-00805f9b34fb';
+
   command_on_para_on = new Uint8Array([-86, 85, 15, 3, -124, 1, -32]);
   // BLE_SERVICE = 'FFF0';
   // BLE_CHARACTERISTIC = 'FFF2';
@@ -77,14 +77,14 @@ export class DetailsPage implements OnInit {
           this.peripherals.id,
           this.BLE_NOTIFY_SERVICE,
           this.BLE_WRITE_CHAR,
-          this.command_on_para_on
+          this.command_on_para_on.buffer
         );
         console.log(`Here is the data after write: ${JSON.stringify(data)}`);
         this.ble.write(
           this.peripherals.id,
           this.BLE_NOTIFY_SERVICE,
           this.BLE_WRITE_CHAR,
-          this.command_on_para_on
+          this.command_on_para_on.buffer
         );
         console.log(`Here is the data after read: ${JSON.stringify(data)}`);
 
